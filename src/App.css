@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Acme&display=swap");
+
+* {
+  background-color: #282c34;
+  font-family: "Acme", sans-serif;
+}
+
+.App {
+  /* background-color: #282c34; */
+  min-height: 100vh;
+}
+
+.App-header {
+  display: flex;
+  flex-direction: column;
+  /* font-size: calc(10px + 2vmin); */
+  margin-top: 30px;
+  text-align: center;
+  align-items: center;
+  margin: auto;
+  width: 60%;
+  text-shadow: 1px 1px 1px #000;
+}
+
+.congrats-text {
+  font-size: 70px;
+  margin-bottom: 0;
+  color: rgb(170, 170, 170);
+}
+
+.selected-text {
+  font-size: 30px;
+  margin-top: 15px;
+  margin-bottom: 0;
+  color: white;
+}
+
+.intstructions {
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+  margin: auto;
+  margin-top: 30px;
+}
+
+.host-image {
+  flex: 1;
+  object-fit: cover;
+  max-width: 20%;
+  margin: 10px;
+}
+.instruct-text-box {
+  color: white;
+  /* border: 2px solid black; */
+  border-radius: 20px;
+  padding: 15px;
+  background-color: rgb(170, 170, 170);
+  flex: 4;
+  margin: 10px;
+  box-shadow: 0 0 12px rgb(170, 170, 170);
+}
+
+.instructions-text {
+  font-size: 20px;
+  background-color: rgb(170, 170, 170);
+}
+
+.game {
+  width: 90%;
+  margin-top: 50px;
+  align-items: center;
+  margin: auto;
+}
+
+.ready {
+  text-align: center;
+  color: white;
+  border: 2px solid black;
+  border-radius: 10px;
+  background-color: black;
+  align-items: center;
+  width: 50%;
+  margin: auto;
+  margin-top: 10vh;
+  margin-bottom: 40px;
+  display: flex;
+  flex: 1;
+}
+.readyText {
+  font-size: 25px;
+  background-color: black;
+  align-items: center;
+  margin: auto;
+  padding: 30px;
+}
+
+.threeDoors {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  margin: auto;
+  width: 80%;
+}
+
+.door {
+  flex: 1;
+  border: none;
+  padding-top: 30px;
+}
+
+.door :active {
+  border: 2px dashed white;
+}
+
+.doorPic {
+  padding: 30px 0;
+}
+
+.credits {
+  text-align: center;
+}
+
+.credit-text {
+  font-size: 20px;
+  justify-content: flex-end;
+  color: white;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
