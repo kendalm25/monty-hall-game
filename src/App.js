@@ -1,18 +1,11 @@
 import "./App.css";
+import Game from "./game";
 import hostImg from "./images/game-show-host.png";
 import doorImg from "./images/door-image.png";
 import React from "react";
 import { useEffect, useState, button } from "react";
 
 export default function App() {
-  const [wins, setWins] = useState(0);
-  const [loss, setLoss] = useState(0);
-
-  const doorPressed = (e) => {
-    const id = e.currentTarget.id;
-    console.log("id is: ", id);
-  };
-
   return (
     <div className="App">
       <header className="App-header">
@@ -42,23 +35,15 @@ export default function App() {
         </div>
       </section>
       <section className="game">
-        <div className="ready">
-          <h3 className="readyText">Are You Ready?</h3>
-        </div>
-        <div className="threeDoors">
-          <button id="1" className="door" type="button" onClick={doorPressed}>
-            <img src={doorImg} alt="door 1" className="doorPic" />
-          </button>
-          <button id="2" className="door" type="button" onClick={doorPressed}>
-            <img src={doorImg} alt="door 2" className="doorPic" />
-          </button>
-          <button id="3" className="door" type="button" onClick={doorPressed}>
-            <img src={doorImg} alt="door 3" className="doorPic" />
-          </button>
+        <div className="game-container">
+          <Game />
         </div>
       </section>
+
       <div className="credits">
-        <p className="credit-text"> Kendal Murray • CS109 Challenge</p>
+        <p className="credit-text">
+          Kendal Murray • CS109 Challenge • Fall 2023
+        </p>
       </div>
     </div>
   );
