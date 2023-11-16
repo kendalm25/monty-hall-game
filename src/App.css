@@ -74,7 +74,7 @@
 
 .game {
   width: 90%;
-  margin-top: 50px;
+  /* margin-top: 50px; */
   align-items: center;
   margin: auto;
 }
