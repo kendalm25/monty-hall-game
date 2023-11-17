@@ -8,6 +8,7 @@
 .App {
   /* background-color: #282c34; */
   min-height: 100vh;
+  /* background-color: white; */
 }
 
 .App-header {
@@ -23,20 +24,20 @@
 }
 
 .congrats-text {
-  font-size: 70px;
+  font-size: 85px;
   margin-bottom: 0;
   color: rgb(170, 170, 170);
 }
 
 .selected-text {
-  font-size: 30px;
+  font-size: 40px;
   margin-top: 15px;
   margin-bottom: 0;
   color: white;
 }
 
 .intstructions {
-  width: 70%;
+  width: 60%;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -63,7 +64,7 @@
 }
 
 .instructions-text {
-  font-size: 20px;
+  font-size: 27px;
   background: none;
 }
 

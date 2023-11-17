@@ -19,16 +19,14 @@ export default function App() {
         <div className="instruct-text-box">
           <p className="instructions-text">
             Welcome to the thrilling game of chance, where luck and strategy
-            collide in the Monty Hall Challenge! Here's how it goes: Behind
-            three magnificent doors lies a wonderful surprise. Two doors hide
-            adorable goats, and one door conceals a brand-new, shiny car. Your
-            mission? To snag that luxurious car for yourself! To kick things
-            off, you'll select one door, any door that calls out to you. Once
-            you've made your choice, hold tight! We'll swing one of the
-            remaining doors wide open to reveal a goat. Yes, one of those pesky
-            goats will make an appearance, leaving your chosen door and the
+            collide! Here's how it goes: Behind three doors lies a wonderful
+            surprise. Two doors hide adorable goats, and one door conceals a
+            brand-new, shiny car. Your mission? To snag that luxurious car for
+            yourself! To kick things off, you'll select one door. Once you've
+            made your choice, hold tight! We'll swing one of the remaining doors
+            wide open to reveal a goat. This will leave your chosen door and the
             other unopened door in play. Now comes the ultimate decision-making
-            moment! You have the opportunity to stick with your original pick or
+            moment: You have the opportunity to stick with your original pick or
             opt for the other remaining closed door. The question is, should you
             stay or should you switch?
           </p>
