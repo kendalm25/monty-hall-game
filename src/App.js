@@ -40,7 +40,13 @@ export default function App() {
 
       <div className="credits">
         <p className="credit-text">
-          Kendal Murray • CS109 Challenge • Fall 2023
+          Kendal Murray • CS109 Challenge • Fall 2023 •{" "}
+          <a
+            href="https://github.com/kendalm25/monty-hall-game"
+            className="credit-text"
+          >
+            GitHub Link
+          </a>
         </p>
       </div>
     </div>

@@ -52,18 +52,15 @@ function Game() {
       setIsDoorClickable(false);
       showDoor = revealDoor(selectedDoor);
       setShowReveal(true);
-      setRevealText(
-        "Nice Pick! Well I Can Ensure You That The Car Is Not Under Door " +
-          showDoor
-      );
+      setRevealText("The Car Is Not Under Door " + showDoor);
 
       // after a few seconds, give them some time to select an option (stay or switch)
       setTimeout(() => {
         setRevealText(
-          "Now Comes The Real Question. Would You Like To Stay With Your Original Door or Switch?"
+          "Would You Like To Stay With Your Original Door or Switch?"
         );
         setDisplayButtons(true);
-      }, 4000);
+      }, 2000);
     }
   };
 
