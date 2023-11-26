@@ -62,7 +62,6 @@ const Simulations = ({ trials }) => {
         type: "bar",
         data: {
           labels: ["Number Of Wins"],
-          //   labels: ["Always Switch", "Always Stay", "Choose Randomly"],
           datasets: [
             {
               label: "Always Switch",

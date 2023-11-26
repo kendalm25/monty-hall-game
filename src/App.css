@@ -1,21 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Acme&display=swap");
 
 * {
-  /* background-color: #282c34; */
-  background-color: #28282e;
+  background-color: #282c34;
   font-family: "Acme", sans-serif;
+  box-sizing: border-box;
 }
 
 .App {
-  /* background-color: #282c34; */
   min-height: 100vh;
-  /* background-color: white; */
 }
 
 .App-header {
   display: flex;
   flex-direction: column;
-  /* font-size: calc(10px + 2vmin); */
   margin-top: 30px;
   text-align: center;
   align-items: center;
@@ -32,7 +29,7 @@
 
 .selected-text {
   font-size: 40px;
-  margin-top: 15px;
+  margin-top: 0px;
   margin-bottom: 0;
   color: white;
 }
@@ -55,9 +52,8 @@
 }
 .instruct-text-box {
   color: white;
-  /* border: 2px solid black; */
-  border-radius: 20px;
-  padding: 15px;
+  border-radius: 5%;
+  padding: 20px 50px;
   background-color: rgb(170, 170, 170, 0.5);
   flex: 4;
   margin: 10px;
@@ -76,7 +72,6 @@
 
 .game {
   width: 90%;
-  /* margin-top: 50px; */
   align-items: center;
   margin: auto;
 }
@@ -90,13 +85,4 @@
   font-size: 20px;
   justify-content: flex-end;
   color: white;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }

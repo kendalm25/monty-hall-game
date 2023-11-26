@@ -36,6 +36,7 @@
   font-size: 20px;
   border: none;
   border-radius: 15px;
+  width: 200px;
 }
 
 .game-conatiner {
@@ -45,23 +46,21 @@
   color: white;
   display: flex;
   flex-direction: row;
-  width: 60%;
+  width: 80%;
   margin: auto;
-  /* border: 2px solid green; */
 }
 
 .num-games-text {
   font-size: 30px;
   flex: 1;
-  /* border: 2px solid red; */
-  /* text-align: start; */
 }
 .action-text {
   font-size: 30px;
-  flex: 3;
-  /* border: 2px solid blue; */
-  /* padding-left: 230px; */
-  /* text-align: start; */
+  flex: 1;
+}
+
+.blank-spot {
+  flex: 1;
 }
 
 .threeDoors {
@@ -82,7 +81,6 @@
   border: none;
   background: none;
   margin: 0 20px;
-  /* padding-top: 30px; */
 }
 .door-text {
   color: white;
@@ -149,7 +147,7 @@
 
 .roundsData {
   margin: auto;
-  margin-top: 100px;
+  margin-top: 120px;
   width: 50%;
 }
 
@@ -168,7 +166,7 @@
 .simulateTrials {
   color: white;
   font-size: 24px;
-  margin-top: 6vh;
+  margin-top: 50px;
 }
 
 .debriefTitle {
@@ -187,8 +185,14 @@
   color: white;
   text-align: start;
 }
+
 .background {
   color: white;
   font-size: 24px;
   text-align: start;
+  margin-bottom: 0px;
+}
+
+.proof-image {
+  max-width: 600px;
 }

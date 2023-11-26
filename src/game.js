@@ -1,8 +1,8 @@
 import "./game.css";
-import hostImg from "./images/game-show-host.png";
 import doorImg from "./images/door-image.png";
 import goatImg from "./images/goat-image.png";
 import carImg from "./images/car-image.png";
+import proof from "./images/monty-hall-proof.png";
 import React from "react";
 import TrialData from "./trialData";
 import Simulations from "./simulations";
@@ -164,7 +164,6 @@ function Game() {
     document.getElementById(1).style.border = "none";
     document.getElementById(2).style.border = "none";
     document.getElementById(3).style.border = "none";
-    // console.log("wins: ", wins, "losses: ", loss);
   };
 
   const showResults = () => {
@@ -197,6 +196,7 @@ function Game() {
           <div className="action-input">
             <p className="num-games-text"> Round: {numOfGames} </p>
             <p className="action-text">{displaySelect}</p>
+            <p className="blank-spot"> {""} </p>
           </div>
           <div className="threeDoors">
             <button id="1" className="door" onClick={doorPressed}>
@@ -267,10 +267,10 @@ function Game() {
       {/* dispaly graph results  */}
       {displayResults && (
         <section className="roundsData">
-          <h3 className="roundsDataText">
+          <p className="roundsDataText">
             {" "}
             Here are the results of your 10 rounds:{" "}
-          </h3>
+          </p>
           <TrialData
             wins={wins}
             loss={loss}
@@ -294,9 +294,9 @@ function Game() {
           <p className="simulateTrials">
             {" "}
             Let's see what happens if we run 10 rounds again, but try a
-            different strategy every time. The first round we always switch to
-            the other door, the second round we always stay with our original
-            door, and the third round, what we decide to do will be completely
+            different strategy every time. The first trial we always switch to
+            the other door, the second trial we always stay with our original
+            door, and the third trial, what we decide to do will be completely
             random. <br /> <br /> Lets look at the results below:
           </p>
           <Simulations trials={10} />
@@ -314,12 +314,7 @@ function Game() {
             either choosing to always stay or choose randomly. But to be really
             REALLY sure, let's run it <b>1000</b> times!
           </p>
-          {/* <button
-            className="resultsButton"
-            onClick={<Simulations trials={1000} />}
-          >
-            RUN 1000 TRIALS
-          </button> */}
+
           <Simulations trials={1000} />
           <p className="simulateTrials">
             {" "}
@@ -367,7 +362,26 @@ function Game() {
             students, let's break it down in terms you will understand.
           </p>
           <p className="backgroundTitle"> CONDITIONAL PROBABILITY</p>
-          <p className="background">...</p>
+          <p className="background">
+            Many people struggle to understand why, once the host reveals a door
+            with a goat, the probability of winning becomes 2/3 when switching,
+            rather than 1/2 or staying with the original proabbility of 1/3. We
+            can actually explain this phenomenon using Bayes' Theorem. <br />{" "}
+            <br /> See the proof I have written below:
+            <img className="proof-image" src={proof} />
+          </p>
+          <h4 className="backgroundTitle"> CONCLUSION</h4>
+          <p className="background">
+            In conclusion, the Monty Hall problem is a fascinating demonstration
+            of probability that often defies our intuition. Through these 10
+            rounds, you've experienced firsthand how switching doors increases
+            your chances of winning. The statistics don't lie: the strategy of
+            always switching yields a higher probability of success. Remember,
+            in situations where uncertainty reigns, embracing the logic of
+            probability can lead to unexpected but advantageous outcomes. So,
+            whether it's doors, decisions, or opportunities in life, sometimes
+            it pays to make the switch!
+          </p>
         </section>
       )}
     </div>
