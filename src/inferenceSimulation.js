@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from "react";
 import Chart from "chart.js/auto";
 
-const Simulations = ({ trials }) => {
+const InferenceSimulations = ({ trials }) => {
   const chartRef = useRef(null);
   let myChart = null;
 
@@ -19,37 +19,9 @@ const Simulations = ({ trials }) => {
     }
     return wins;
   }
-  // logic: if the car is behind the door they initially chose, they win
-  function alwaysStay(trials) {
-    let wins = 0;
-    for (let i = 0; i < trials; i++) {
-      const doors = [1, 2, 3];
-      const winner = doors[Math.floor(Math.random() * doors.length)];
-      const choice = doors[Math.floor(Math.random() * doors.length)];
-      if (choice === winner) {
-        wins++;
-      }
-    }
-    return wins;
-  }
-
-  // randomly choose whether to stay or switch
-  function chooseRandomly(trials) {
-    let wins = 0;
-    for (let i = 0; i < trials; i++) {
-      const switchDoor = Math.random() < 0.5;
-      if (switchDoor) {
-        wins += alwaysSwitch(1);
-      } else {
-        wins += alwaysStay(1);
-      }
-    }
-    return wins;
-  }
 
   const switches = alwaysSwitch(trials);
-  const stays = alwaysStay(trials);
-  const random = chooseRandomly(trials);
+  const stays = 10000 - switches;
 
   useEffect(() => {
     if (chartRef && chartRef.current) {
@@ -65,19 +37,14 @@ const Simulations = ({ trials }) => {
           labels: ["Number Of Wins"],
           datasets: [
             {
-              label: "Always Switch",
+              label: "Number of Times Switches Won",
               data: [switches],
               backgroundColor: "rgba(240,128,128, 0.7)",
             },
             {
-              label: "Always Stay",
+              label: "Number of Times Staying Won",
               data: [stays],
               backgroundColor: "rgba(54, 162, 235, 0.7)",
-            },
-            {
-              label: "Choose Randomly",
-              data: [random],
-              backgroundColor: "rgba(255,140,0, 0.7)",
             },
           ],
         },
@@ -119,4 +86,4 @@ const Simulations = ({ trials }) => {
   return <canvas ref={chartRef} />;
 };
 
-export default Simulations;
+export default InferenceSimulations;

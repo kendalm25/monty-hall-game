@@ -6,6 +6,7 @@ import proof from "./images/monty-hall-proof.png";
 import React from "react";
 import TrialData from "./trialData";
 import Simulations from "./simulations";
+import InferenceSimulations from "./inferenceSimulation";
 import { useState } from "react";
 
 function Game() {
@@ -322,7 +323,7 @@ function Game() {
             strategy if you are trying to win as many games as possible. But why
             is this? <br /> <br />
           </p>
-          <h3 className="debriefTitle"> DISCUSSION </h3>
+          <h3 className="debriefTitle"> WRITE UP </h3>
           <p className="debrief">
             You have probably noticed by now but this game is the Monty Hall
             Problem. Which is a famous probability puzzle that albeit seeming
@@ -366,10 +367,39 @@ function Game() {
             Many people struggle to understand why, once the host reveals a door
             with a goat, the probability of winning becomes 2/3 when switching,
             rather than 1/2 or staying with the original proabbility of 1/3. We
-            can actually explain this phenomenon using Bayes' Theorem. <br />{" "}
-            <br /> See the proof I have written below:
-            <img className="proof-image" src={proof} />
+            can actually explain this phenomenon using Bayes' Theorem.
           </p>
+          <p className="background">See the proof I have written below:</p>
+          <img className="proof-image" src={proof} />
+
+          <p className="backgroundTitle"> INFERENCE </p>
+          <p className="simulateTrials">
+            We can also use inference to help us draw conclusions! Let's run
+            10,000 trials again, but this time we will display the proportions
+            of wins when the play switches doors versus when they stick with
+            their original choice.
+          </p>
+          <InferenceSimulations trials={10000} />
+          <p className="background">
+            (Considering the computer is running 10,000 trials each time the
+            game is played the numbers I will work with won't be exact to what
+            is currently being displayed in the chart. The numbers I will work
+            with are the averages of the number of wins I collected after
+            running this simultaion of 10,000 games, 10 times.)
+          </p>
+
+          <p className="background">
+            The average number of wins with "switching" was 6,667.
+          </p>
+          <p className="background">
+            The average number of wins with "staying" was 3,333.
+          </p>
+          <p className="background">
+            Based on these results, we can estimate the probability of winning
+            when switching is approximately 66.67%, while the probability of
+            winning when staying is approximately 33.36%.
+          </p>
+
           <h4 className="backgroundTitle"> CONCLUSION</h4>
           <p className="background">
             In conclusion, the Monty Hall problem is a fascinating demonstration
