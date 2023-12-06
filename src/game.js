@@ -362,6 +362,40 @@ function Game() {
             win", might help it out a bit. But knowing you all are CS109
             students, let's break it down in terms you will understand.
           </p>
+
+          <p className="backgroundTitle"> INFERENCE </p>
+          <p className="background">
+            We will start by using inference to help us draw conclusions! Let's
+            run 10,000 trials, but this time we will display the proportions of
+            wins when the play switches doors versus when they stick with their
+            original choice.
+          </p>
+          <div style={{ marginTop: 10 }}>
+            <InferenceSimulations trials={10000} />
+          </div>
+          <p className="background">
+            (Considering the computer is running 10,000 trials each time the
+            game is played the numbers I will work with won't be exact to what
+            is currently being displayed in the chart. The numbers I will work
+            with are the results from when I ran the simulation, however the
+            results being dipslayed will still apply.)
+          </p>
+
+          <p className="background">
+            The number of wins with "switching" was 6594.
+          </p>
+          <p className="background">
+            The number of wins with "staying" was 3406.
+          </p>
+          <p className="background">
+            Based on these results, we can estimate the probability of winning
+            when switching is approximately 65.94%. We know that a sample size
+            of 10,000 has a margin of error of 1%, meaning a sample proprotion
+            will be between 1% of the actual probability. This allows us to have
+            a high level of confidence in our inference as we know the true
+            porbability is likely to fall within 1% of our estimated 65.94%.
+          </p>
+
           <p className="backgroundTitle"> CONDITIONAL PROBABILITY</p>
           <p className="background">
             Many people struggle to understand why, once the host reveals a door
@@ -372,45 +406,15 @@ function Game() {
           <p className="background">See the proof I have written below:</p>
           <img className="proof-image" src={proof} />
 
-          <p className="backgroundTitle"> INFERENCE </p>
-          <p className="simulateTrials">
-            We can also use inference to help us draw conclusions! Let's run
-            10,000 trials again, but this time we will display the proportions
-            of wins when the play switches doors versus when they stick with
-            their original choice.
-          </p>
-          <InferenceSimulations trials={10000} />
-          <p className="background">
-            (Considering the computer is running 10,000 trials each time the
-            game is played the numbers I will work with won't be exact to what
-            is currently being displayed in the chart. The numbers I will work
-            with are the averages of the number of wins I collected after
-            running this simultaion of 10,000 games, 10 times.)
-          </p>
-
-          <p className="background">
-            The average number of wins with "switching" was 6,667.
-          </p>
-          <p className="background">
-            The average number of wins with "staying" was 3,333.
-          </p>
-          <p className="background">
-            Based on these results, we can estimate the probability of winning
-            when switching is approximately 66.67%, while the probability of
-            winning when staying is approximately 33.36%.
-          </p>
-
           <h4 className="backgroundTitle"> CONCLUSION</h4>
           <p className="background">
             In conclusion, the Monty Hall problem is a fascinating demonstration
-            of probability that often defies our intuition. Through these 10
-            rounds, you've experienced firsthand how switching doors increases
-            your chances of winning. The statistics don't lie: the strategy of
-            always switching yields a higher probability of success. Remember,
-            in situations where uncertainty reigns, embracing the logic of
-            probability can lead to unexpected but advantageous outcomes. So,
-            whether it's doors, decisions, or opportunities in life, sometimes
-            it pays to make the switch!
+            of probability that defies our intuition. Through playing 10 rounds,
+            you've experienced firsthand how switching doors increases your
+            chances of winning. Remember, in situations where uncertainty
+            reigns, embracing the logic of probability can lead to unexpected
+            but advantageous outcomes. So, whether it's doors, decisions, or
+            opportunities in life, sometimes it pays to make the switch!
           </p>
         </section>
       )}
